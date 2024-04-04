@@ -15,18 +15,14 @@ def get_empregado_by_id(db: Session, empregado_id: int):
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Employee with this id not found")
 
 
-def create_empregado(db: Session, empregado: EmpregadoSchema, empregado_id: int):
+def create_empregado(db: Session, empregado: EmpregadoSchema):
     _empregado = Empregado(
-        id = empregado.id,
+        #id = empregado.id,
         name = empregado.name,
         email = empregado.email,
         salary = empregado.salary,
         birth = empregado.birth,
         address = empregado.address)
-    
-    find_person = db.query(Empregado).filter(Empregado.id == empregado_id).first()
-    if find_person is not None:
-        raise HTTPException(status_code=status.HTTP_406_NOT_ACCEPTABLE, detail="Employee with this id alredy exists")
 
     db.add(_empregado)
     db.commit()

@@ -2,7 +2,7 @@ from pydantic import BaseModel , Field
 
 
 class EmpregadoSchema(BaseModel):
-    id : int
+    #id : int
     name : str
     email : str
     salary : float
@@ -24,6 +24,3 @@ class ResponseEmpregado(BaseModel):
     salary : float
     birth : str
     address : str
-    code: str
-    status: str
-    message: str
