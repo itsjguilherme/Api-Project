@@ -27,7 +27,19 @@ class Empregado(Base):
             "email": self.email,
             "salary": self.salary,
             "birth": self.birth,
-            "address": self.address,
+            "address": self.address
+        }
+
+        return data
+    
+    def relationship_to_dict(self):
+        data = {
+            "id": self.id,
+            "name": self.name,
+            "email": self.email,
+            "salary": self.salary,
+            "birth": self.birth,
+            "address": self.address
         }
 
         return data

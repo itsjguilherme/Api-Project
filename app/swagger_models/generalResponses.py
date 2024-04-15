@@ -12,3 +12,11 @@ class PaginationDoc(BaseModel):
     prev: Optional[int]
     next: Optional[int]
     current: int
+
+class ResponseEmpregadoGeneric(BaseModel):
+    id : int
+    name : str
+    email : str
+    salary : float
+    birth : str
+    address : str

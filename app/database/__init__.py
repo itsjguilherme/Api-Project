@@ -11,3 +11,13 @@ DATABASE_URL = 'postgresql://postgres:Joao1234@localhost:5432/empresa'
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush = False, bind=engine)
 Base = declarative_base()
+
+def get_db():
+    def _get_db():
+        db = SessionLocal()
+        try:
+            yield db
+        finally:
+            db.close()
+    
+    return next(_get_db())

@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from app.swagger_models.generalResponses import PaginationDoc
+from app.swagger_models.vehicleResponses import ResponseVehicle
 
 
 class ResponseEmpregado(BaseModel):

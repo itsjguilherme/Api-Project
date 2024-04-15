@@ -1,6 +1,5 @@
 from pydantic import BaseModel
-from app.swagger_models.generalResponses import PaginationDoc
-from app.swagger_models.employeeResponses import ResponseEmpregado
+from app.swagger_models.generalResponses import PaginationDoc, ResponseEmpregadoGeneric
 
 
 class ResponseVehicle(BaseModel):
@@ -9,7 +8,7 @@ class ResponseVehicle(BaseModel):
     model: str
     brand: str
     color: str
-    employee: ResponseEmpregado
+    employee: ResponseEmpregadoGeneric
 
 class VehicleAll(BaseModel):
     error: bool = False

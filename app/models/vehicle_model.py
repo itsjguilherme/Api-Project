@@ -27,7 +27,18 @@ class Vehicle(Base):
             "model": self.model,
             "brand": self.brand,
             "color": self.color,
-            "employee": self.employee.to_dict(),
+            "employee": self.employee.relationship_to_dict(),
+        }
+
+        return data
+    
+    def relationship_to_dict(self):
+        data = {
+            "id": self.id,
+            "plate": self.plate,
+            "model": self.model,
+            "brand": self.brand,
+            "color": self.color
         }
 
         return data

@@ -36,7 +36,7 @@ def paginate(query: Query, page: int = 1, rows_per_page: int = 1):
 
 # update table line
 def instance_update(instance, request_json):
-    instance_keys : list[str] = list(instance.to_dict().keys())
+    instance_keys: list[str] = list(instance.to_dict().keys())
 
     for key in instance_keys:
       if key in request_json and request_json[key] is not None:

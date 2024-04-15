@@ -9,13 +9,6 @@ class CreateVehicle(BaseModel):
     color: str
     employee_id: int
 
-    model_config = {
-        "employee_id": 1,
-        "plate": "plate",
-        "model": "model",
-        "brand": "brand",
-        "color": "color"
-    }
 
 class UpdateVehicle(BaseModel):
     plate: Optional[str] = None
@@ -23,11 +16,3 @@ class UpdateVehicle(BaseModel):
     brand: Optional[str] = None
     color: Optional[str] = None
     employee_id: Optional[int] = None
-
-    model_config = {
-        "employee_id": 1,
-        "plate": "plate",
-        "model": "model",
-        "brand": "brand",
-        "color": "color"
-    }
