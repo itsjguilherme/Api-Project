@@ -5,10 +5,10 @@ import os
 STAGE = os.getenv("STAGE", None)
 
 # Localhost: Morticia
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:Joao1234@localhost:5432/empresa")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:1234@localhost:5432/empresa")
 
 if STAGE == "test":
-    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:Joao1234@localhost:5432/empresa_test")
+    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:1234@localhost:5432/empresa_test")
 
 # Localhost: Lia
 # DATABASE_URL = 'postgresql://postgres:joao1234@localhost:5432/api_empresa'

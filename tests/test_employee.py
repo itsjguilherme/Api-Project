@@ -1,8 +1,3 @@
-"""
-    Arquivo de testes de usuários.
-"""
-import uuid
-
 def test_read_all_employee( client_app ):
     response = client_app.get("/employee/all")
     
