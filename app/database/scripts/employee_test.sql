@@ -1,0 +1,1 @@
+INSERT INTO empregado (id, name, email, salary, birth, address) VALUES (13, 'test', 'test@email.com', 5000, 'dd/mm/aaaa', 'rua blabla, 12 - abobrinha');
